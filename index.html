@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			body {
+				background-color: #000;
+				margin-left: 25px;
+				margin-top: 25px;
+				color: #db70db;
+				font-family: Consolas, monaco, monospace;
+			}
+			h1, h3{
+				font-size: 24px;
+				font-style: normal;
+				font-variant: normal;
+			}
+			h1 {
+				font-size: 24px;
+				font-weight: 500;
+				line-height: 26.4px;
+			}
+			h3 {
+				font-size: 14px;
+				font-weight: 500;
+				line-height: 15.4px;
+			}
+			.intro1, .intro2 {
+				margin-bottom: 5px;
+			}
+			.hidden {
+				display:none;
+			}
+			.typed-cursor{
+				opacity: 1;
+				-webkit-animation: blink 0.7s infinite;
+				-moz-animation: blink 0.7s infinite;
+				animation: blink 0.7s infinite;
+			}
+			@keyframes blink{
+				0% { opacity:1; }
+				50% { opacity:0; }
+				100% { opacity:1; }
+			}
+			@-webkit-keyframes blink{
+				0% { opacity:1; }
+				50% { opacity:0; }
+				100% { opacity:1; }
+			}
+			@-moz-keyframes blink{
+				0% { opacity:1; }
+				50% { opacity:0; }
+				100% { opacity:1; }
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="heading"></h1>
+		<div class="intro1"></div>
+		<div class="intro2"></div>
+		<div class="intro3"></div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" 
+				integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" 
+				crossorigin="anonymous"></script>
+		<script src="typed.js"></script>
+		<script>
+			$(function(){
+
+				setTimeout(function(){
+					$(".heading").typed({
+						strings: ["Hello,"],
+						typeSpeed: 30,
+						backDelay: 750,
+						showCursor: false,
+						loop: false,
+					});
+				}, 0);
+
+				setTimeout(function(){
+					$(".intro1").typed({
+						strings: ["My name is Niklas Engberg"],
+						typeSpeed: 20,
+						showCursor: false,
+						loop: false,
+					});
+				}, 1000);
+				setTimeout(function(){
+					$(".intro2").typed({
+						strings: ["I currently work as a Solution Architect crafting software"],
+						typeSpeed: 20,
+						backDelay: 750,
+						showCursor: false,
+						loop: false,
+					});
+				}, 3000);
+				setTimeout(function(){
+					$(".intro3").typed({
+						strings: ["More to come!"],
+						typeSpeed: 20,
+						backDelay: 750,
+						showCursor: false,
+						loop: false,
+					});
+				}, 7000);
+			});
+		</script>
+	</body>
+</html>
